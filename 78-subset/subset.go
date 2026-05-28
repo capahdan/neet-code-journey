@@ -13,7 +13,7 @@ func Subset(nums []int) [][]int {
 		for i := start; i < len(nums); i++ {
 			curr = append(curr, nums[i]) // choose
 			backTrack(i+1, curr)         // explore
-			curr = curr[:len(curr)-1]
+			curr = curr[:len(curr)-1]    // unchoose
 		}
 	}
 
